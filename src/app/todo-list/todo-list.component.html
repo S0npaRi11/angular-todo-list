@@ -1,0 +1,9 @@
+<div class="task-input">
+    <!-- <input type="text"  placeholder="Create new task" #taskInput />
+    <button (click)="addTask(taskInput)"> Create </button> -->
+    <button (click)="navigateToAdd()"> Add Task </button>
+</div>
+
+<div *ngFor="let task of tasks" class="task-list">
+    <app-task [task]="task" (taskID)="markTaskCompleted($event)" (taskToDelete)="deleteTask($event)"></app-task>
+</div>

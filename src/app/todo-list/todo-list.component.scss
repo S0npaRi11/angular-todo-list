@@ -1,0 +1,39 @@
+.task-input{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    align-self: flex-start
+}
+
+.task-input input{
+    width: 20em;
+    height: 2.5em;
+    margin: 5px;
+    border-radius: 3px;
+    border: gray solid 1px;
+    padding: 5px;
+}
+
+.task-input button{
+    height: 2.5em;
+    margin: 5px;
+    width: 6em;
+    border-radius: 3px;
+    border: gray solid 1px;
+}
+
+.task-input button:hover{
+    cursor: pointer;
+}
+
+.task-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // padding: 10px 0;
+}

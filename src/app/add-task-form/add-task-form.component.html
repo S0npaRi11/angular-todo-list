@@ -1,0 +1,39 @@
+<div>
+    <h3> Add new Task </h3>
+    <p [ngClass]="taskMessageStyles"><!-- Form submission success and failure messsages here -->
+        {{taskFormMessage}}
+    </p>
+    <button (click)="goToHome()">
+        View All Tasks
+    </button>
+    <form #addTaskForm="ngForm" (ngSubmit)="addNewTask(addTaskForm.value)">
+        <div>
+            <label for="title"> Title </label> <br />
+            <input type="text" name="title" id="title" required placeholder="Title of the task" ngModel #title="ngModel"/>
+            <div *ngIf="title.invalid && title.touched" class="text-red">
+                <small> Title is required </small>
+            </div>
+        </div>
+
+        <div>
+            <label for="body"> Body </label> <br />
+            <textarea name="body" id="body" ngModel placeholder="Additional Information about task (optional)" cols="30" rows="10"></textarea>
+        </div>
+
+        <div>
+            <label for="priority"> Priority </label> <br />
+            <select name="priority" id="priority" required ngModel #priority="ngModel">
+                <option value="0" selected> Low </option>
+                <option value="1"> Medium </option>
+                <option value="2"> High </option>
+            </select>
+            <div *ngIf="priority.invalid && priority.touched" class="text-red">
+                <small> Priority is required </small>
+            </div>
+        </div>
+
+        <div>
+            <input type="submit" value="Create" [disabled]="addTaskForm.form.invalid" />
+        </div>
+    </form>
+</div>

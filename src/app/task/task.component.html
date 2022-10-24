@@ -1,0 +1,15 @@
+<!-- <p> {{task?.body}} </p> -->
+<div [ngClass]="taskBorderClass()" data-role="task" [id]="task?.id">
+    <div>
+        <!-- <input  type="checkbox" [checked]="task?.isCompleted" /> -->
+        <span class="task-body" (click)="sendIdWithEvent(task?.id)"> {{task?.title}} </span>
+        <p> {{task?.body}} </p>
+    </div>
+    <div>
+        <span class="task-priority"> Priority: {{task?.priority == "0" ? 'low' : task?.priority == "1" ? 'medium' : 'high'}} </span>
+        <div class="task-footer">
+            <span class="task-date">Date: {{task?.date | date:'short'}} </span>
+            <button class="task-delete-button" (click)="sendIdToDelete(task?.id)"> &#10060; </button>
+        </div>
+    </div>
+</div>

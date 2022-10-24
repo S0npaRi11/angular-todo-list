@@ -1,0 +1,57 @@
+h3{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    font-size: 16px;
+}
+
+form{
+    margin: 0 auto;
+    width: 22em;
+}
+
+div{
+    width: 100%;
+}
+
+input, textarea, select{
+    width: 100%;
+    margin-top: 5px;
+}
+
+form > div{
+    margin: 15px 0;
+}
+
+input, select{
+    height: 2.5em;
+    // margin: 5px;
+    border-radius: 3px;
+    border: gray solid 1px;
+    padding: 5px;
+}
+
+textarea{
+    padding: 5px;
+    border-radius: 3px;
+    border: gray solid 1px;
+}
+
+label{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+input[type=submit]:hover, select:hover{
+    cursor: pointer;
+}
+
+.text-red{
+    color: red;
+}
+
+.text-green{
+    color: green;
+}
